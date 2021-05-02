@@ -1,5 +1,4 @@
 const Quiz = require("../../../models/Quiz");
-const Question = require("../../../models/Questions");
 
 const getQuizByID = async (req, res) => {
   try {
