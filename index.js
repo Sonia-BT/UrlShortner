@@ -8,6 +8,7 @@ require("dotenv").config();
 
 const urlRouter = require("./api/controllers/URL/router");
 const questionRouter = require("./api/controllers/Questions/router");
+const quizRouter = require("./api/controllers/Quiz/router");
 
 mongoose.connect(process.env.MONGODB, {
   useNewUrlParser: true,
@@ -29,6 +30,7 @@ const PORT = process.env.PORT || 2000;
 
 app.use("/URL", urlRouter);
 app.use("/Question", questionRouter);
+app.use("/Quiz", quizRouter);
 
 /*Redirect the URL*/
 app.get("/:id", async (req, res) => {

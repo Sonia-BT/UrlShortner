@@ -10,6 +10,7 @@ const quizSchema = new Schema(
     Questions: [
       {
         type: Schema.Types.ObjectId,
+        ref: "Question",
       },
     ],
   },
